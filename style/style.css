@@ -1,0 +1,177 @@
+body{
+    margin: 0 20px;
+    padding: 0 20px;
+    position: relative;
+}
+main{
+    margin-top: 80px;
+}
+header{
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 75px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    z-index: 5;
+}
+header h3{
+    font-weight: 900;
+    font-size: 20px;
+    margin-right: auto;
+}
+.item{
+    transition: 0.5s;
+}
+.item:hover {
+    opacity: 0.6;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+.imgs{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(190px,1fr));
+    gap: 30px;
+}
+.imgs div p{
+    font-size: 12px;
+    margin-top: 0;
+}
+.moreText{
+    text-align: center;
+    margin-top: 30px;
+}
+.moreText p{
+    font-size: 14px;
+}
+footer{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.linkWrapper{
+    margin-top: 100px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 30px;
+}
+.link{
+    font-size: 12px;
+}
+.comText{
+    font-size: 10px;
+    text-align: end;
+    margin-top: 110px;
+    margin-bottom: 10px;
+}
+
+.menubtn{
+    position: relative;/*ボタン内側の基点となるためrelativeを指定*/
+    width: 50px;
+    height:50px;
+    cursor: pointer;
+    background:rgba(255, 255, 255, 0);
+    margin-left: auto;
+}
+    
+/*ボタン内側*/
+  
+.menubtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 13px;
+    height: 2px;
+    background-color: black;
+}
+  
+  
+.menubtn span:nth-of-type(1) {
+    top:22px; 
+    width: 60%;
+}
+  
+.menubtn span:nth-of-type(2) {
+    top:29px;
+    width:60%;
+}
+  
+/*activeクラスが付与されると線が回転して×に*/
+
+.menubtn.active span:nth-of-type(1) {
+    top: 20px;
+    left: 16px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 60%;
+}
+  
+.menubtn.active span:nth-of-type(2) {
+    top: 32px;
+    left: 16px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 60%;
+}
+#menu{
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+#menu ul{
+    margin: 25px 10px;
+    animation: fadeIn 0.5s ease 0.2s 1 normal backwards;
+}
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateX(-40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+#menu ul li{
+    list-style: none;
+    color: white;
+    font-size: 14px;
+    padding: 8px 0;
+}
+.hidden{
+    display: none;
+}
+
+@media screen and (max-width:900px){
+    .imgs{
+        display: grid;
+        grid-template-columns: repeat(2,minmax(190px,1fr));
+        gap: 25px;
+    }
+    footer{
+        display: contents;
+    }
+    .linkWrapper{
+        margin-bottom: 10px;
+    }
+    .comText{
+        margin: 0;
+        margin-bottom: 15px;
+        text-align: start;
+    }
+}
+@media screen and (min-width:1360px) {
+    body{
+        padding: 0 60px;
+    }
+    header{
+        padding: 0 80px;
+    }
+}
