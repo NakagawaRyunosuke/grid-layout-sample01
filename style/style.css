@@ -23,6 +23,10 @@ header h3{
     font-weight: 900;
     font-size: 20px;
     margin-right: auto;
+    transition: 0.5s;
+}
+header h3:hover{
+    opacity: 0.6;
 }
 .item{
     transition: 0.5s;
@@ -62,6 +66,14 @@ footer{
 }
 .link{
     font-size: 12px;
+    transition: 0.5s;
+}
+.link:hover{
+    opacity: 0.6;
+}
+.link a{
+    text-decoration: none;
+    color: black;
 }
 .comText{
     font-size: 10px;
