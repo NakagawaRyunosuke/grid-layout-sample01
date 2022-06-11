@@ -6,6 +6,11 @@ body{
 main{
     margin-top: 80px;
 }
+main p{
+    font-size: 14px;
+    padding-top: 40px;
+    margin-bottom: 30px;
+}
 header{
     display: flex;
     padding: 0 40px;
@@ -50,9 +55,28 @@ img{
 .moreText{
     text-align: center;
     margin-top: 30px;
+    transition: 0.5s;
+}
+.moreText:hover{
+    opacity: 0.6;
 }
 .moreText p{
     font-size: 14px;
+}
+.moreText p a{
+    text-decoration: none;
+    color: black;
+}
+.pageLink{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.pageLink a{
+    padding:20px;
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
 }
 footer{
     display: grid;
