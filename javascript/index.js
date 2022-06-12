@@ -22,7 +22,7 @@ $("#title").click(function(){
 });
 
 $(".item").click(function(){
-    window.location.href = "item.html";
+    window.location.href = "html/item.html";
     const src = $(this).children("img").attr("src");
     sessionStorage.setItem("img",src);
 });
