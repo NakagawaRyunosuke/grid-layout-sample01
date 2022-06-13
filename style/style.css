@@ -39,6 +39,10 @@ header h3:hover{
 .item:hover {
     opacity: 0.6;
 }
+.item p{
+    padding: 5px 0;
+    margin-bottom: 0;
+}
 img{
     max-width: 100%;
     max-height: 100%;
@@ -46,7 +50,7 @@ img{
 .imgs{
     display: grid;
     grid-template-columns: repeat(4,minmax(190px,1fr));
-    gap: 30px;
+    gap: 35px;
 }
 .imgs div p{
     font-size: 12px;
@@ -77,6 +81,10 @@ img{
     font-size: 13px;
     text-decoration: none;
     color: black;
+    transition: 0.5s;
+}
+.pageLink a:hover{
+    opacity: 0.6;
 }
 footer{
     display: grid;
@@ -177,9 +185,12 @@ footer{
 
 #menu ul li{
     list-style: none;
-    color: white;
     font-size: 14px;
     padding: 8px 0;
+}
+#menu ul li a{
+    color: white;
+    text-decoration: none;
 }
 .hidden{
     display: none;

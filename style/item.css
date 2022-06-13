@@ -28,6 +28,18 @@ header h3{
     font-size: 20px;
     margin-right: auto;
 }
+.item p{
+    padding: 5px 0;
+    margin-bottom: 0;
+}
+#backLink a{
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+#backLink a:hover{
+    opacity: 0.6;
+}
 footer{
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -40,6 +52,14 @@ footer{
 }
 .link{
     font-size: 12px;
+    transition: 0.5s;
+}
+.link:hover{
+    opacity: 0.6;
+}
+.link a{
+    text-decoration: none;
+    color: black;
 }
 .comText{
     font-size: 10px;

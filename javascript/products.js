@@ -18,14 +18,12 @@ $("#menu").click(function(){
 });
 
 $("#title").click(function(){
-    window.location.href = "index.html";
+    window.location.href = "../index.html";
 });
 
 $(".item").click(function(){
-    window.location.href = "html/item.html";
+    window.location.href = "item.html";
     let src = $(this).children("img").attr("src");
-    src = "."+src;
     console.log(src)
     sessionStorage.setItem("img",src);
 });
-
