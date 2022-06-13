@@ -136,7 +136,7 @@ footer{
     }
   }
 
-  #menu ul li{
+#menu ul li{
     list-style: none;
     font-size: 14px;
     padding: 8px 0;
@@ -175,7 +175,10 @@ footer{
         display: contents;
     }
     .linkWrapper{
-        margin-bottom: 10px;
+        margin-bottom: 0;
+    }
+    .link{
+        margin-bottom: 0;
     }
     .comText{
         margin: 0;
