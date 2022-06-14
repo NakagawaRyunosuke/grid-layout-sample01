@@ -1,15 +1,15 @@
 body{
-    font-size: 14px;
     margin: 0 20px;
     padding: 0 20px;
     position: relative;
 }
 main{
-    padding-top: 110px;
+    margin-top: 80px;
 }
-#itemImg{
-    width: 400px;
-    height: 400px;
+main p{
+    font-size: 14px;
+    padding-top: 40px;
+    margin-bottom: 30px;
 }
 header{
     display: flex;
@@ -22,30 +22,70 @@ header{
     top: 0;
     right: 0;
     background-color: white;
+    z-index: 5;
 }
 header h3{
     font-weight: 900;
     font-size: 20px;
     margin-right: auto;
+    transition: 0.5s;
+}
+header h3:hover{
+    opacity: 0.6;
+}
+.items{
+    margin-bottom: 100px;
+    max-width: 600px;
+}
+.item{
+    display: flex;
+    gap: 125px;
+    padding-left: 10px;
+    border-bottom: 1px solid rgb(222, 221, 221);
 }
 .item p{
-    padding: 5px 0;
-    margin-bottom: 0;
+    margin: 20px 0;
+    padding: 0 0;
 }
-#backLink a{
+.item ul{
+    padding-inline-start: 0;
+    padding-top: 3px;
+}
+.listItem{
+    list-style: none;
+    font-size: 14px;
+}
+.last{
+    border-bottom: 0;
+}
+.pageLink{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.pageLink a{
+    padding:20px;
+    font-size: 13px;
     text-decoration: none;
     color: black;
     transition: 0.5s;
 }
-#backLink a:hover{
+.pageLink a:hover{
     opacity: 0.6;
+}
+.gmap{
+    width: 100%;
+    height: 300px;
+    margin-top: 25px;
+    filter: grayscale(1);
+   
 }
 footer{
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
 .linkWrapper{
-    margin-top: 100px;
+    margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     gap: 30px;
@@ -64,7 +104,7 @@ footer{
 .comText{
     font-size: 10px;
     text-align: end;
-    margin-top: 110px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 .menubtn{
@@ -123,18 +163,18 @@ footer{
 }
 #menu ul{
     margin: 25px 10px;
-    animation: fadeIn 1s ease 0s 1 normal backwards;
+    animation: fadeIn 0.5s ease 0.2s 1 normal backwards;
 }
 @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translateX(-20px);
+      transform: translateX(-40px);
     }
     to {
       opacity: 1;
       transform: translateX(0);
     }
-  }
+}
 
 #menu ul li{
     list-style: none;
@@ -147,27 +187,6 @@ footer{
 }
 .hidden{
     display: none;
-}
-.wrapper{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    margin-top: 30px;
-}
-.textarea{
-    width: 340px;
-}
-.textarea p{
-    margin-top: 0;
-    margin-bottom: 30px;
-}
-.itemInfo p span{
-    display: inline-block;
-    width: 100px;
-}
-#backLink{
-    text-align: center;
-    margin-top: 50px;
 }
 
 @media screen and (max-width:900px){
@@ -182,24 +201,24 @@ footer{
     }
     .comText{
         margin: 0;
+        margin-top: 5px;
         margin-bottom: 15px;
         text-align: start;
     }
-    .wrapper{
-        display: contents;
+    .item{
+        display: block;
+        padding: 10px 10px;
     }
-    #itemImg{
-        width: 100%;
-        height: 100%;
+    .item p{
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
-    .textarea{
-        width: 100%;
-        margin-top: 30px;
+    .gmap{
+        margin-top: 10px;
     }
-    .itemInfo p span{
-        width: 30%;
+    .item ul{
+        margin-block-start: 0.5em;
     }
-    
 }
 @media screen and (min-width:1360px) {
     body{

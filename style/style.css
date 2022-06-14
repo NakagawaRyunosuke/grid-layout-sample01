@@ -203,7 +203,7 @@ footer{
         gap: 25px;
     }
     footer{
-        display: contents;
+        display: block;
     }
     .linkWrapper{
         margin-bottom: 0;
